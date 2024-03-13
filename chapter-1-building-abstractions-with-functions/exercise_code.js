@@ -15,12 +15,12 @@ console.log("a === b: ", a === b);
 console.log("b > a && b < a * b ? b : a ", b > a && b < a * b ? b : a);
 console.log(
   "a === 4 ? 6 : b === 4 ? 6 + 7 + a : 25",
-  a === 4 ? 6 : b === 4 ? 6 + 7 + a : 25
+  a === 4 ? 6 : b === 4 ? 6 + 7 + a : 25,
 );
 console.log("2 + (b > a ? b : a) ", 2 + (b > a ? b : a));
 console.log(
   "(a > b ? a : a < b ? b : -1) * (a + 1) ",
-  (a > b ? a : a < b ? b : -1) * (a + 1)
+  (a > b ? a : a < b ? b : -1) * (a + 1),
 );
 
 /* 1.2 */
@@ -41,7 +41,46 @@ function squareSumLargerTwo(num1, num2, num3) {
 
 console.log(
   "The sum of the square of two larger numbers in [10, 2, 3]: ",
-  squareSumLargerTwo(10, 2, 3)
+  squareSumLargerTwo(10, 2, 3),
 );
 
 /* Please refer to the `exercise_theory.md` for 1.4 and 1.5 */
+
+/* 1.6 */
+
+// Alyssa's conditional function that replaces the ternary expression:
+function conditional(predicate, then_clause, else_clause) {
+  return predicate ? then_clause : else_clause;
+}
+
+// Newton's Method
+function sqrt_iter(guess, x) {
+  return conditional(
+    is_good_enough(guess, x),
+    guess,
+    sqrt_iter(improve(guess, x), x),
+  );
+}
+
+function is_good_enough(guess, x) {
+  return Math.abs(guess ** 2 - x) < 1e-3;
+}
+
+function improve(guess, x) {
+  return average(guess, x / guess);
+}
+
+function average(x, y) {
+  return (x + y) / 2;
+}
+
+function sqrt(x) {
+  return sqrt_iter(1, x);
+}
+
+console.log("\n==========Exercise 1.6==========");
+console.log(
+  "This function won't work because when the `conditional(a, b, c)` function been called, all three arguments will be evaluated immediately thus make the program stuck in a infinite loop",
+);
+// Try following and get the error
+// console.log(sqrt(3));
