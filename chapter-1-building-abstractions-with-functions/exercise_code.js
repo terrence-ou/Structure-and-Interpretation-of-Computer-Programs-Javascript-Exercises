@@ -32,3 +32,16 @@ console.log("Evaluation result: ", eval().toFixed(4));
 
 /* 1.3 */
 console.log("\n==========Exercise 1.3==========");
+function squareSumLargerTwo(num1, num2, num3) {
+  if (num2 > num1) [num1, num2] = [num2, num1];
+  if (num3 >= num1) [num1, num2] = [num3, num1];
+  else if (num3 >= num2) num2 = num3;
+  return num1 ** 2 + num2 ** 2;
+}
+
+console.log(
+  "The sum of the square of two larger numbers in [10, 2, 3]: ",
+  squareSumLargerTwo(10, 2, 3)
+);
+
+/* Please refer to the `exercise_theory.md` for 1.4 and 1.5 */
