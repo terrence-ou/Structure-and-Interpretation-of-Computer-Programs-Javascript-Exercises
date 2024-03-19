@@ -44,7 +44,7 @@ console.log(
   squareSumLargerTwo(10, 2, 3)
 );
 
-/* Please refer to the `exercise_theory.md` for 1.4 and 1.5 */
+/* Please refer to the `exercise_01_theory.md` for 1.4 and 1.5 */
 
 // helper functions for 1.6 and 1.7, from the book example
 
