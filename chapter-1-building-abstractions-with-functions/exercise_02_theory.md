@@ -59,13 +59,18 @@ We assume that $Fib(n) = r ^n$, and the recursive format of $Fib(n)$ can be expr
 $$r^n = r^{n - 1} + r ^ {n - 2}$$
 Assuming that $r \neq 0$, we divide both sides by $r^{n - 2}$, and get:
 $$r^2 = r + 1$$
-Given that in the quadratic formula $ax^2 + bx + c = 0$
+Given that in the quadratic formula $ax^2 + bx + c = 0$:
+
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
+
 We can solving the equation:
+
 $$r = \frac{1 \pm \sqrt{5}}{2}$$
+
 Then we can denote each solution as:
+
 $$
 \phi = \frac{1 + \sqrt{5}}{2}, \quad
 \psi = \frac{1 - \sqrt{5}}{2}
