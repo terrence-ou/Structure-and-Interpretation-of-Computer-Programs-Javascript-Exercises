@@ -19,4 +19,5 @@ function sqrt(x) {
   return sqrt_iter(1, x);
 }
 
-console.log(sqrt(9));
+console.log(sqrt(0.0001));
+console.log(sqrt(79_012_329_876_544));
