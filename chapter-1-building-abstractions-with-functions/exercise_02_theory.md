@@ -78,10 +78,13 @@ $$
 
 **Step 2**\
 The Fibonacci sequence if a linear homogeneous recurrence relation of the second degree, its general solution is a linear combination of the solutions found:
+
 $$
 Fib(n) = A(\phi^n) + B(\psi^n)
 $$
+
 For $n = 0, Fib(0) = 0$ and $n = 1, Fib(1) = 1$, we can find the values of $A$ and $B$:
+
 $$
 A + B = 0 \\
 A\phi + B\psi = 1 \\
@@ -90,7 +93,9 @@ $$
 
 **Step 3**\
 Now we subsitute $A$ and $B$ back into the general solution:
+
 $$
 Fib(n) = \frac{1}{\sqrt{5}}\phi^n - \frac{1}{\sqrt{5}}\psi^n = \frac{\phi^n - \psi^n}{\sqrt{5}} 
 $$
+
 With n increasing, $\psi^n$ will gradually approaching 0, therefore $Fib(n)$ is the closest integer to $\phi^n / \sqrt{5}$
