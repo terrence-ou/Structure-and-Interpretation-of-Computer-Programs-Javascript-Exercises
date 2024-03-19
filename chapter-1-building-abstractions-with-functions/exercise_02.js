@@ -34,3 +34,25 @@ console.log("result of f(20) iterative method: ", fr(20));
 console.timeEnd("f(n) iterative method total time: ");
 
 /* 1.12 */
+function pascalTriangle(row, col) {
+  return col === 0 || col === row
+    ? 1
+    : pascalTriangle(row - 1, col - 1) + pascalTriangle(row - 1, col);
+}
+
+// Helper function to print out the pascal triagnle with given number of rows
+function printPascalTriangle(n) {
+  const totalPad = n - 1;
+  for (let row = 0; row < n; row++) {
+    let str = "".padStart(totalPad - row, " ");
+    for (let col = 0; col < row + 1; col++) {
+      str += pascalTriangle(row, col);
+      str += " ";
+    }
+    console.log(str);
+  }
+}
+
+console.log("\n==========Exercise 1.12==========");
+console.log("A pasccal triangle with 5 rows:");
+printPascalTriangle(5);

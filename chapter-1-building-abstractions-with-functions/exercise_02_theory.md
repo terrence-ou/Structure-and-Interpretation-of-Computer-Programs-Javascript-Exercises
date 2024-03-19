@@ -51,3 +51,41 @@ function k(n) {
 }
 ```
 The math expression of `k(n)` is: $5n^2$
+
+## Exercise 1.13
+
+**Step 1**\
+We assume that $Fib(n) = r ^n$, and the recursive format of $Fib(n)$ can be expressed as:\
+$$r^n = r^{n - 1} + r ^ {n - 2}$$
+Assuming that $r \neq 0$, we divide both sides by $r^{n - 2}$, and get:
+$$r^2 = r + 1$$
+Given that in the quadratic formula $ax^2 + bx + c = 0$
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+We can solving the equation:
+$$r = \frac{1 \pm \sqrt{5}}{2}$$
+Then we can denote each solution as:
+$$
+\phi = \frac{1 + \sqrt{5}}{2}, \quad
+\psi = \frac{1 - \sqrt{5}}{2}
+$$
+
+**Step 2**\
+The Fibonacci sequence if a linear homogeneous recurrence relation of the second degree, its general solution is a linear combination of the solutions found:
+$$
+Fib(n) = A(\phi^n) + B(\psi^n)
+$$
+For $n = 0, Fib(0) = 0$ and $n = 1, Fib(1) = 1$, we can find the values of $A$ and $B$:
+$$
+A + B = 0 \\
+A\phi + B\psi = 1 \\
+A = \frac{1}{\sqrt{5}}, \quad B = -\frac{1}{\sqrt{5}}
+$$
+
+**Step 3**\
+Now we subsitute $A$ and $B$ back into the general solution:
+$$
+Fib(n) = \frac{1}{\sqrt{5}}\phi^n - \frac{1}{\sqrt{5}}\psi^n = \frac{\phi^n - \psi^n}{\sqrt{5}} 
+$$
+With n increasing, $\psi^n$ will gradually approaching 0, therefore $Fib(n)$ is the closest integer to $\phi^n / \sqrt{5}$
