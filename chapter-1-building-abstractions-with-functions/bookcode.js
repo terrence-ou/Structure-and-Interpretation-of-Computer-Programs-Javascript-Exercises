@@ -21,3 +21,33 @@ function sqrt(x) {
 
 console.log(sqrt(0.0001));
 console.log(sqrt(79_012_329_876_544));
+
+// 1.2.2 Example: Counting changes
+function countChanges(amount) {
+  return cc(amount, 5);
+}
+
+function cc(amount, kindsOfCoins) {
+  return amount === 0
+    ? 1
+    : amount < 0 || kindsOfCoins === 0
+      ? 0
+      : cc(amount, kindsOfCoins - 1) +
+        cc(amount - firstDenomination(kindsOfCoins), kindsOfCoins);
+}
+
+function firstDenomination(kindsOfCoins) {
+  return kindsOfCoins === 1
+    ? 1
+    : kindsOfCoins === 2
+      ? 5
+      : kindsOfCoins === 3
+        ? 10
+        : kindsOfCoins === 4
+          ? 25
+          : kindsOfCoins === 5
+            ? 50
+            : 0;
+}
+
+console.log(countChanges(100));
