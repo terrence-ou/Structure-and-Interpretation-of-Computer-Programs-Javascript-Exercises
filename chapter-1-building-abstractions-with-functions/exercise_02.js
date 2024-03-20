@@ -56,3 +56,28 @@ function printPascalTriangle(n) {
 console.log("\n==========Exercise 1.12==========");
 console.log("A pasccal triangle with 5 rows:");
 printPascalTriangle(5);
+
+/* 1.15 */
+let runCounts = 0;
+
+function cube(x) {
+  return x * x * x;
+}
+
+function p(x) {
+  runCounts += 1;
+  return 3 * x - 4 * cube(x);
+}
+
+function sine(angle) {
+  return !(Math.abs(angle) > 0.1) ? angle : p(sine(angle / 3));
+}
+
+console.log("\n==========Exercise 1.15==========");
+sine(12.15);
+console.log(
+  "The total time of the function p runs when evaluation sine(12.15) is: ",
+  runCounts
+);
+
+// The answers to theory questions are in exercise_02_theory.md

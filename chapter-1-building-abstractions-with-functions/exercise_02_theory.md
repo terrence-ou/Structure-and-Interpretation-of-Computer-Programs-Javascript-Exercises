@@ -105,3 +105,15 @@ Fib(n) = \frac{1}{\sqrt{5}}\phi^n - \frac{1}{\sqrt{5}}\psi^n = \frac{\phi^n - \p
 $$
 
 With n increasing, $\psi^n$ will gradually approaching 0, therefore $Fib(n)$ is the closest integer to $\phi^n / \sqrt{5}$
+
+## Exercise 1.14
+
+<img src="./images/exercise_01_14.jpg" />
+
+The step has $\Theta(2^N)$ order of growth, where $N$ is the target amount;\
+The order of growth of the space is $\Theta(N \cdot m)$, where $N$ is the target amount and $m$ is the number of coin dominations, because each combination of amount and coin denomication is calculated only once.
+
+## Exercise 1.15
+
+The number of steps of `sine(angle)` is $\Theta(\log_3\frac{N}{m})$, where $N$ is the angle, and $m$ is the precision; \
+The space complexity is also $\Theta(\log_3\frac{N}{m})$, reflecting the depth of the recursive calls. 
